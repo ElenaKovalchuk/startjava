@@ -3,7 +3,7 @@ public class VariablesTheme {
     public static void main(String[] args) {
         System.out.print("\n1. Создание переменных и вывод их значений на консоль\n");
         byte internalMemory = 16;
-        System.out.println("Оперативная пямять =  " + internalMemory);
+        System.out.println("Оперативная память =  " + internalMemory);
 
         short processor = 11300;
         System.out.println("Серия процессора Intel =  " + processor);
@@ -27,15 +27,15 @@ public class VariablesTheme {
         System.out.println("Нравится ли мне компьютер = " + isGood);
 
         System.out.print("\n2. Расчет стоимости товара со скидкой\n");
-        int x = 100;
-        int y = 200;
+        int productXPrice = 100;
+        int productYPrice = 200;
         int discount = 11;
 
-        int bothItemsDiscount = (x + y) * discount / 100;
+        int bothItemsDiscount = (productXPrice + productYPrice) * discount / 100;
         System.out.println("Размер скидки на оба товара в рублях = " + bothItemsDiscount);
 
-        int totalCostWithDiscount = (x + y) - bothItemsDiscount;
-        System.out.println("Общая стоимость товара со скидкой = " + totalCostWithDiscount);
+        int discountPrice = (productXPrice + productYPrice - bothItemsDiscount);
+        System.out.println("Общая стоимость товара со скидкой = " + discountPrice);
 
         System.out.print("\n3. Вывод на консоль слова JAVA\n");
         System.out.println("   J    a  v     v  a");
@@ -43,171 +43,157 @@ public class VariablesTheme {
         System.out.println("J  J  aaaaa  V V  aaaaa");
         System.out.println(" JJ  a     a  V  a     a");
 
+
         System.out.print("\n4. Отображение min и max значений числовых типов данных\n");
         byte maxByte = 127;
-        byte maxByteIncrement = ++maxByte;
-        byte maxByteDecrement = --maxByte;
         System.out.println("Byte максимум =  " + maxByte);
-        System.out.println("Byte максимум значение после инкремента =  " + maxByteIncrement);
-        System.out.println("Byte максимум значение после декремента =  " + maxByteDecrement + "\n");
+        maxByte= ++maxByte;
+        System.out.println("Byte максимум значение после инкремента =  " + maxByte);
+        maxByte= --maxByte;
+        System.out.println("Byte максимум значение после декремента =  " + maxByte + "\n");
 
         short maxShort = 32767;
-        short maxShortIncrement = ++maxShort;
-        short maxShortDecrement = --maxShort;
         System.out.println("Short максимум =  " + maxShort);
-        System.out.println("Short максимум значение после инкремента =  " + maxShortIncrement);
-        System.out.println("Short максимум значение после декремента =  " + maxShortDecrement + "\n");
+        maxShort= ++maxShort;
+        System.out.println("Short максимум значение после инкремента =  " + maxShort);
+        maxShort= --maxShort;
+        System.out.println("Short максимум значение после декремента =  " + maxShort + "\n");
+
 
         int maxInt = 2147483647;
-        int maxIntIncrement = ++maxInt;
-        int maxIntDecrement = --maxInt;
         System.out.println("Int максимум =  " + maxInt);
-        System.out.println("Int максимум значение после инкремента =  " + maxIntIncrement);
-        System.out.println("Int максимум значение после декремента =  " + maxIntDecrement + "\n");
+        maxInt= ++maxInt;
+        System.out.println("Int максимум значение после инкремента =  " + maxInt);
+        maxInt= --maxInt;
+        System.out.println("Int максимум значение после декремента =  " + maxInt + "\n");
 
         long maxLong = 9223372036854775807L;
-        long maxLongIncrement = ++maxLong;
-        long maxLongDecrement = --maxLong;
         System.out.println("Long максимум =  " + maxLong);
-        System.out.println("Long максимум значение после инкремента =  " + maxLongIncrement);
-        System.out.println("Long максимум значение после декремента =  " + maxLongDecrement + "\n");
+        maxLong= ++maxLong;
+        System.out.println("Long максимум значение после инкремента =  " + maxLong);
+        maxLong= --maxLong;
+        System.out.println("Long максимум значение после декремента =  " + maxLong + "\n");
 
         float maxFloat = 3.4028235E38f;
-        float maxFloatIncrement = ++maxFloat;
-        float maxFloatDecrement = --maxFloat;
         System.out.println("Float максимум =  " + maxFloat);
-        System.out.println("Float максимум значение после инкремента =  " + maxFloatIncrement);
-        System.out.println("Float максимум значение после декремента =  " + maxFloatDecrement + "\n");
+        maxFloat= ++maxFloat;
+        System.out.println("Float максимум значение после инкремента =  " + maxFloat);
+        maxFloat= --maxFloat;
+        System.out.println("Float максимум значение после декремента =  " + maxFloat + "\n");
 
         double maxDouble = 1.7976931348623157E308;
-        double maxDoubleIncrement = ++maxDouble;
-        double maxDoubleDecrement = --maxDouble;
-        System.out.println("Double максимум =  " + maxDouble);
-        System.out.println("Double максимум значение после инкремента =  " + maxDoubleIncrement);
-        System.out.println("Double  максимум значение после декремента =  " + maxDoubleDecrement + "\n");
+        System.out.println("Double максимум =  " + maxDouble );
+        maxDouble = ++maxDouble ;
+        System.out.println("Double максимум значение после инкремента =  " + maxDouble );
+        maxDouble = --maxDouble ;
+        System.out.println("Double максимум значение после декремента =  " + maxDouble  + "\n");
 
         System.out.print("\n5. Перестановка значений переменных\n");
-        double first = 1.1;
-        double second = 2.2;
+        double num1 = 1.1;
+        double num2 = 2.2;
 
         System.out.print("\nC помощью третьей переменной\n");
-        System.out.println("Исходное значение первого числа = " + first);
-        System.out.println("Исходное значение второго числа = " + second);
-        double third = first;
-        first = second;
-        second = third;
-        System.out.println("Новое значение первого числа = " + first);
-        System.out.println("Новое значение второго числа = " + second + "\n");
+        System.out.println("Исходное значение первого числа = " + num1);
+        System.out.println("Исходное значение второго числа = " + num2);
+        double tmp = num1;
+        num1 = num2;
+        num2 = tmp;
+        System.out.println("Новое значение первого числа = " + num1);
+        System.out.println("Новое значение второго числа = " + num2 + "\n");
 
         System.out.print("C помощью  арифметических операций\n");
-        System.out.println("Исходное значение первого числа = " + first);
-        System.out.println("Исходное значение второго числа = " + second);
-        first = first + second;
-        second = first - second;
-        first = first - second;
-        System.out.println("Новое значение первого числа = " + first);
-        System.out.println("Новое значение второго числа = " + second + "\n");
+        System.out.println("Исходное значение первого числа = " + num1);
+        System.out.println("Исходное значение второго числа = " + num2);
+        num1 = num1 + num2;
+        num2= num1 - num2;
+        num1 = num1- num2;
+        System.out.println("Новое значение первого числа = " + num1);
+        System.out.println("Новое значение второго числа = " + num2 + "\n");
 
         System.out.print("C помощью побитовой операции\n");
-        System.out.println("Исходное значение первого числа = " + first);
-        System.out.println("Исходное значение второго числа = " + second);
+        System.out.println("Исходное значение первого числа = " + num1);
+        System.out.println("Исходное значение второго числа = " + num2);
 
-        //отделяем дробную часть от целой
-        int firstInt = (int) first;
-        double fractionPartFirst = first - firstInt;
+        //умножаем исходные числа на 10, чтобы сделать их целыми
 
-        int secondInt = (int) second;
-        double fractionPartSecond = second - secondInt;
+        num1 = num1 * 10;
+        int tmp1 = (int) num1;
+        num2 = num2 * 10;
+        int tmp2 = (int) num2;
 
-        // переводим дробную часть в целое число
-        int tempFractionFirst = (int) (fractionPartFirst * 10);
-        int tempFractionSecond = (int) (fractionPartSecond * 10);
 
-        // проводим побитовую операцию с целой частью
-        firstInt = firstInt ^ secondInt;
-        secondInt = secondInt ^ firstInt;
-        firstInt = firstInt ^ secondInt;
-        second = (double) secondInt;
-        first = (double) firstInt;
 
-//        // проводим побитовую операцию с дробной частью
-        tempFractionFirst = tempFractionFirst ^ tempFractionSecond;
-        tempFractionSecond = tempFractionSecond ^ tempFractionFirst;
-        tempFractionFirst = tempFractionFirst ^ tempFractionSecond;
+        // проводим побитовую операцию
+        tmp1 =  tmp1  ^ tmp2;
+        tmp2 = tmp2 ^  tmp1 ;
+        tmp1  = tmp1  ^ tmp2;
+
 
         // возвращаем дробную часть в дробный вид, делим на 10
-        fractionPartFirst = (double) tempFractionFirst;
-        fractionPartFirst = tempFractionFirst / 10.0;
+        num1 = (double)  tmp1;
+        num1 =  num1  / 10.0;
 
-        fractionPartSecond = (double) tempFractionSecond;
-        fractionPartSecond = tempFractionSecond / 10.0;
+        num2 = (double) tmp2;
+        num2 = num2 / 10.0;
 
-        // суммируем целую и дробную часть получившегося числа
-        first = first + fractionPartFirst;
-        second = second + fractionPartSecond;
-
-        System.out.println("Новое значение первого числа " + first);
-        System.out.println("Новое значение второго числа " + second + "\n");
+        System.out.println("Новое значение первого числа " + num1);
+        System.out.println("Новое значение второго числа " + num2 + "\n");
 
         System.out.print("6. Вывод символов и их кодов\n");
-        int num1 = 35;
-        char num1Char = (char) num1;
-        System.out.println("Код символа = " + num1 + "," + "Символ = " + num1Char);
+        int codeChar1 = 35;
+        System.out.println("Код символа = " + codeChar1 + "," + "Символ = " +(char) codeChar1);
 
-        int num2 = 38;
-        char num2Char = (char) num2;
-        System.out.println("Код символа = " + num2 + "," + "Символ = " + num2Char);
 
-        int num3 = 64;
-        char num3Char = (char) num3;
-        System.out.println("Код символа = " + num3 + "," + "Символ = " + num3Char);
+        int codeChar2 = 38;
+        System.out.println("Код символа = " + codeChar2 + "," + "Символ = " +(char) codeChar2);
 
-        int num4 = 94;
-        char num4Char = (char) num4;
-        System.out.println("Код символа = " + num4 + "," + "Символ = " + num4Char);
+        int codeChar3 = 64;
+        System.out.println("Код символа = " + codeChar3 + "," + "Символ = " +(char) codeChar3);
 
-        int num5 = 95;
-        char num5Char = (char) num5;
-        System.out.println("Код символа = " + num5 + "," + "Символ = " + num5Char + "\n");
+        int codeChar4 = 94;
+        System.out.println("Код символа = " + codeChar4 + "," + "Символ = " +(char) codeChar4);
+
+        int codeChar5 = 95;
+        System.out.println("Код символа = " + codeChar5 + "," + "Символ = " +(char) codeChar5 + "\n");
 
 
         System.out.print("7. Произведение и сумма цифр числа\n");
-        int num = 345;
-        int hundreds = (num / 100);
-        int tens = (num / 10) % 10;
-        int units = num % 10;
+        int srcNum = 345;
+        int hundreds = (srcNum / 100);
+        int tens = (srcNum / 10) % 10;
+        int ones = srcNum % 10;
 
-        int mult = hundreds * tens * units;
+        int mult = hundreds * tens * ones;
         System.out.println("Произведение цифр числа 345 = " + mult);
 
-        int sum = hundreds + tens + units;
+        int sum = hundreds + tens + ones;
         System.out.println("Сумма цифр числа 345 = " + sum);
 
         System.out.print("\n8. Вывод на консоль ASCII-арт Дюка\n");
-        String backSlash = "\\";
+        String backslash = "\\";
         String slash = "/";
         String space = " ";
         String openBracket = "(";
         String closeBracket = ")";
         String underscore = "_";
-        System.out.println(space + space + space + space + slash + backSlash + space + space + space + space + space);
-        System.out.println(space + space + space + slash + space + space + backSlash + space + space + space + space);
-        System.out.println(space + space + slash + underscore + openBracket + space + closeBracket + backSlash + space + space + space);
-        System.out.println(space + slash + space + space + space + space + space + space + backSlash + space + space);
-        System.out.println(slash + underscore + underscore + underscore + underscore + slash + backSlash + underscore + underscore + backSlash + space);
+        System.out.println(space + space + space + space + slash + backslash + space + space + space + space + space);
+        System.out.println(space + space + space + slash + space + space + backslash + space + space + space + space);
+        System.out.println(space + space + slash + underscore + openBracket + space + closeBracket + backslash + space + space + space);
+        System.out.println(space + slash + space + space + space + space + space + space + backslash + space + space);
+        System.out.println(slash + underscore + underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash + space);
 
         System.out.print("\n9. Отображение количества сотен, десятков и единиц числа\n");
-        int numb = 123;
-        int hundred = (numb / 100);
-        int ten = (numb / 10) % 10;
-        int unit = numb % 10;
-        System.out.println(" Число N содержит: " + hundred + " сотню, " + ten + " десятка, " + unit + " единицы");
+        srcNum = 123;
+        int hundred = (srcNum / 100);
+        int ten = (srcNum / 10) % 10;
+        ones = srcNum % 10;
+        System.out.println(" Число N содержит: " + hundred + " сотню, " + ten + " десятка, " + ones + " единицы");
 
         System.out.print("\n10. Преобразование секунд\n");
-        int sec = 86399;
-        int hours = sec / 3600;
-        int minutes = (sec % 3600) % 60;
-        int leftSec = ((sec % 3600) % 60) % 60;
-        System.out.println(hours + ":" + minutes + ":" + leftSec);
+        int totalSec = 86399;
+        int hours = totalSec / 3600;
+        int minutes = (totalSec % 3600) % 60;
+        int sec = ((totalSec % 3600) % 60) % 60;
+        System.out.println(hours + ":" + minutes + ":" + sec);
                                         }
                              }
