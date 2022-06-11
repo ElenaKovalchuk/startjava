@@ -109,17 +109,17 @@ public class IfElseStatementTheme {
             double interestRate = 0.05;
             double depositInterest = depositValue * interestRate;
             double amountWithInterest = depositValue + depositInterest;
-            System.out.println("Сумма вклада = " + depositValue + " , начисленный процент= " + depositInterest + " , итоговая сумма с процентом= " + amountWithInterest);
+            System.out.println("Сумма вклада = " + depositValue + " , начисленный процент = " + depositInterest + " , итоговая сумма с процентом = " + amountWithInterest);
         } else if (depositValue > 300000) {
             double interestRate = 0.1;
             double depositInterest = depositValue * interestRate;
             double amountWithInterest = depositValue + depositInterest;
-            System.out.println("Сумма вклада = " + depositValue + " , начисленный процент= " + depositInterest + " , итоговая сумма с процентом= " + amountWithInterest);
+            System.out.println("Сумма вклада = " + depositValue + " , начисленный процент = " + depositInterest + " , итоговая сумма с процентом = " + amountWithInterest);
         } else {
             double interestRate = 0.07;
             double depositInterest = depositValue * interestRate;
             double amountWithInterest = depositValue + depositInterest;
-            System.out.println("Сумма вклада = " + depositValue + " , начисленный процент= " + depositInterest + " , итоговая сумма с процентом= " + amountWithInterest);
+            System.out.println("Сумма вклада = " + depositValue + " , начисленный процент = " + depositInterest + " , итоговая сумма с процентом = " + amountWithInterest);
         }
 
         System.out.println("\n 7. Определение оценки по предметам %\n");
