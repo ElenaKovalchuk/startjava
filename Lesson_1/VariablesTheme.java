@@ -43,50 +43,36 @@ public class VariablesTheme {
         System.out.println("J  J  aaaaa  V V  aaaaa");
         System.out.println(" JJ  a     a  V  a     a");
 
-
         System.out.print("\n4. Отображение min и max значений числовых типов данных\n");
         byte maxByte = 127;
         System.out.println("Byte максимум =  " + maxByte);
-        maxByte= ++maxByte;
-        System.out.println("Byte максимум значение после инкремента =  " + maxByte);
-        maxByte= --maxByte;
-        System.out.println("Byte максимум значение после декремента =  " + maxByte + "\n");
+        System.out.println("Byte минимум значение после инкремента =  " + ++maxByte);
+        System.out.println("Byte максимум значение после декремента =  " + --maxByte + "\n");
 
         short maxShort = 32767;
         System.out.println("Short максимум =  " + maxShort);
-        maxShort= ++maxShort;
-        System.out.println("Short максимум значение после инкремента =  " + maxShort);
-        maxShort= --maxShort;
-        System.out.println("Short максимум значение после декремента =  " + maxShort + "\n");
-
+        System.out.println("Byte минимум значение после инкремента =  " + ++maxShort);
+        System.out.println("Byte максимум значение после декремента =  " + --maxShort + "\n");
 
         int maxInt = 2147483647;
         System.out.println("Int максимум =  " + maxInt);
-        maxInt= ++maxInt;
-        System.out.println("Int максимум значение после инкремента =  " + maxInt);
-        maxInt= --maxInt;
-        System.out.println("Int максимум значение после декремента =  " + maxInt + "\n");
+        System.out.println("Byte минимум значение после инкремента =  " + ++maxInt);
+        System.out.println("Byte максимум значение после декремента =  " + --maxInt + "\n");
 
         long maxLong = 9223372036854775807L;
         System.out.println("Long максимум =  " + maxLong);
-        maxLong= ++maxLong;
-        System.out.println("Long максимум значение после инкремента =  " + maxLong);
-        maxLong= --maxLong;
-        System.out.println("Long максимум значение после декремента =  " + maxLong + "\n");
+        System.out.println("Byte минимум значение после инкремента =  " + ++maxLong);
+        System.out.println("Byte максимум значение после декремента =  " + --maxLong + "\n");
 
         float maxFloat = 3.4028235E38f;
         System.out.println("Float максимум =  " + maxFloat);
-        maxFloat= ++maxFloat;
-        System.out.println("Float максимум значение после инкремента =  " + maxFloat);
-        maxFloat= --maxFloat;
-        System.out.println("Float максимум значение после декремента =  " + maxFloat + "\n");
+        System.out.println("Byte минимум значение после инкремента =  " + ++maxFloat);
+        System.out.println("Byte максимум значение после декремента =  " + --maxFloat + "\n");
 
         double maxDouble = 1.7976931348623157E308;
-        System.out.println("Double максимум =  " + maxDouble );
-        maxDouble = ++maxDouble ;
-        System.out.println("Double максимум значение после инкремента =  " + maxDouble );
-        maxDouble = --maxDouble ;
-        System.out.println("Double максимум значение после декремента =  " + maxDouble  + "\n");
+        System.out.println("Double максимум =  " + maxDouble);
+        System.out.println("Byte минимум значение после инкремента =  " + ++maxDouble);
+        System.out.println("Byte максимум значение после декремента =  " + --maxDouble + "\n");
 
         System.out.print("\n5. Перестановка значений переменных\n");
         double num1 = 1.1;
@@ -104,9 +90,10 @@ public class VariablesTheme {
         System.out.print("C помощью  арифметических операций\n");
         System.out.println("Исходное значение первого числа = " + num1);
         System.out.println("Исходное значение второго числа = " + num2);
-        num1 = num1 + num2;
-        num2= num1 - num2;
-        num1 = num1- num2;
+          num1 += num2;  // то же что num1 = num1 + num2;
+          num2= num1 - num2;
+          num1 -= num2; // то же что num1 = num1 - num2;
+
         System.out.println("Новое значение первого числа = " + num1);
         System.out.println("Новое значение второго числа = " + num2 + "\n");
 
@@ -115,26 +102,22 @@ public class VariablesTheme {
         System.out.println("Исходное значение второго числа = " + num2);
 
         //умножаем исходные числа на 10, чтобы сделать их целыми
-
-        num1 = num1 * 10;
+        num1 *= 10; //num1 = num1 * 10;
         int tmp1 = (int) num1;
-        num2 = num2 * 10;
+        num2 *= 10; //num2 = num2 * 10;
         int tmp2 = (int) num2;
 
-
-
         // проводим побитовую операцию
-        tmp1 =  tmp1  ^ tmp2;
-        tmp2 = tmp2 ^  tmp1 ;
-        tmp1  = tmp1  ^ tmp2;
-
+        tmp1 ^= tmp2;     //tmp1 =  tmp1  ^ tmp2;
+        tmp2 ^= tmp1;  //tmp2 = tmp2 ^  tmp1 ;
+        tmp1 ^= tmp2;  //tmp1  = tmp1  ^ tmp2;
 
         // возвращаем дробную часть в дробный вид, делим на 10
         num1 = (double)  tmp1;
-        num1 =  num1  / 10.0;
+        num1 /= 10.0; //num1 =  num1  / 10.0;
 
         num2 = (double) tmp2;
-        num2 = num2 / 10.0;
+        num2 /= 10.0; //num2 = num2 / 10.0;
 
         System.out.println("Новое значение первого числа " + num1);
         System.out.println("Новое значение второго числа " + num2 + "\n");
@@ -142,7 +125,6 @@ public class VariablesTheme {
         System.out.print("6. Вывод символов и их кодов\n");
         int codeChar1 = 35;
         System.out.println("Код символа = " + codeChar1 + "," + "Символ = " +(char) codeChar1);
-
 
         int codeChar2 = 38;
         System.out.println("Код символа = " + codeChar2 + "," + "Символ = " +(char) codeChar2);
@@ -156,18 +138,17 @@ public class VariablesTheme {
         int codeChar5 = 95;
         System.out.println("Код символа = " + codeChar5 + "," + "Символ = " +(char) codeChar5 + "\n");
 
-
         System.out.print("7. Произведение и сумма цифр числа\n");
         int srcNum = 345;
         int hundreds = (srcNum / 100);
         int tens = (srcNum / 10) % 10;
         int ones = srcNum % 10;
 
-        int mult = hundreds * tens * ones;
-        System.out.println("Произведение цифр числа 345 = " + mult);
+        int multDigits = hundreds * tens * ones;
+        System.out.println("Произведение цифр числа 345 = " + multDigits);
 
-        int sum = hundreds + tens + ones;
-        System.out.println("Сумма цифр числа 345 = " + sum);
+        int sumDigits = hundreds + tens + ones;
+        System.out.println("Сумма цифр числа 345 = " + sumDigits);
 
         System.out.print("\n8. Вывод на консоль ASCII-арт Дюка\n");
         String backslash = "\\";
@@ -195,5 +176,5 @@ public class VariablesTheme {
         int minutes = (totalSec % 3600) % 60;
         int sec = ((totalSec % 3600) % 60) % 60;
         System.out.println(hours + ":" + minutes + ":" + sec);
-                                        }
-                             }
+    }
+}
