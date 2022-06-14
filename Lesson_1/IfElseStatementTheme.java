@@ -49,14 +49,18 @@ public class IfElseStatementTheme {
             System.out.println("Это ноль");
         } else if (num % 2 == 0) {
             System.out.println("Четное число");
+            if (num > 0) {
+                System.out.println("Положительное число");
+            } else {
+                System.out.println("Отрицательное число");
+            }
         } else if (num % 2 != 0) {
             System.out.println("Нечетное число");
-        }
-
-        if (num > 0) {
-            System.out.println("Положительное число");
-        } else {
-            System.out.println("Отрицательное число");
+            if (num > 0) {
+                System.out.println("Положительное число");
+            } else {
+                System.out.println("Отрицательное число");
+            }
         }
 
         System.out.println("\n 4. Поиск одинаковых цифр в числах \n");
@@ -91,13 +95,12 @@ public class IfElseStatementTheme {
 
         System.out.println("\n 5. Определение буквы, числа или символа по их коду \n");
         char code = '\u0057';
-        char temp = (char) code;
 
-        if ((temp >= '0' && temp <= '9')){
+        if ((code >= '0' && code <= '9')){
             System.out.println("Это число");
-        } else if (temp >= 'a' && temp <= 'z') {
+        } else if (code >= 'a' && code <= 'z') {
             System.out.println(" Это маленькая буква");
-        } else if (temp >= 'A' && temp <= 'Z') {
+        } else if (code >= 'A' && code <= 'Z') {
             System.out.println(" Это большая буква");
         } else {
             System.out.println("Это не буква и не число");
@@ -129,31 +132,25 @@ public class IfElseStatementTheme {
 
         if (programmingMarkPercentage <= 60) {
             programmingScore = 2;
-            System.out.println(subjectNameProgramming + ", оценка = " + programmingScore);
         } else if (programmingMarkPercentage > 60 && programmingMarkPercentage <= 73) {
             programmingScore = 3;
-            System.out.println(subjectNameProgramming + ", оценка = " + programmingScore);
         } else if (programmingMarkPercentage > 91) {
             programmingScore = 5;
-            System.out.println(subjectNameProgramming + ", оценка = " + programmingScore);
         } else {
             programmingScore = 4;
-            System.out.println(subjectNameProgramming + ", оценка = " + programmingScore);
         }
+        System.out.println(subjectNameProgramming + ", оценка = " + programmingScore);
 
         if (historyMarkPercentage <= 60) {
             historyScore = 2;
-            System.out.println(subjectNameHistory + ", оценка = " + historyScore);
         } else if (historyMarkPercentage > 60 && programmingMarkPercentage <= 73) {
             historyScore = 3;
-            System.out.println(subjectNameHistory + ", оценка = " + historyScore);
         } else if (historyMarkPercentage > 91) {
             historyScore = 5;
-            System.out.println(subjectNameHistory + ", оценка = " + historyScore);
         } else {
             historyScore = 4;
-            System.out.println(subjectNameHistory + ", оценка = " + historyScore);
         }
+        System.out.println(subjectNameHistory + ", оценка = " + historyScore);
 
         int averageMarkPercentage = (programmingMarkPercentage + historyMarkPercentage) / 2;
         System.out.println("Средний % по предметам " + averageMarkPercentage);
@@ -166,12 +163,12 @@ public class IfElseStatementTheme {
         int averageMonthlySalesRevenue = 13000;
         int averageMonthlyGoodsCost = 9000;
 
-        int AnnualProfit = (averageMonthlySalesRevenue - monthlyRentPayment - averageMonthlyGoodsCost) * 12;
+        int annualProfit = (averageMonthlySalesRevenue - monthlyRentPayment - averageMonthlyGoodsCost) * 12;
 
-        if (AnnualProfit > 0) {
-            System.out.println("+" + AnnualProfit);
+        if (annualProfit > 0) {
+            System.out.println("+" + annualProfit);
         } else {
-            System.out.println(AnnualProfit);
+            System.out.println(annualProfit);
         }
 
         System.out.println("\n 9. Подсчет количества банкнот\n");
